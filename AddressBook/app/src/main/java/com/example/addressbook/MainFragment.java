@@ -60,17 +60,16 @@ public class MainFragment extends Fragment {
         Button showFragmentButton = view.findViewById(R.id.showAddressButton);
 
         inputFragmentButton.setOnClickListener( v -> {
-            mainActivity.getSupportFragmentManager().beginTransaction().replace(R.id.MainFrameLayout, inputFragment).addToBackStack(null).commit();
+            mainActivity.changeFragment(inputFragment);
         });
         showFragmentButton.setOnClickListener( v -> {
-            mainActivity.getSupportFragmentManager().beginTransaction().replace(R.id.MainFrameLayout, addListFrgment).addToBackStack(null).commit();
+            mainActivity.changeFragment(addListFrgment);
         });
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        Log.e("click", "click");
         mainActivity = (MainActivity)getActivity();
     }
 
