@@ -22,8 +22,7 @@ public class MainFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private InputFragment inputFragment = InputFragment.newInstance("1", "2");
-    private AddListFrgment addListFrgment  = AddListFrgment.newInstance("1", "2");
+
 
     private MainActivity mainActivity;
 
@@ -56,15 +55,7 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button inputFragmentButton = view.findViewById(R.id.inputAddressButton);
-        Button showFragmentButton = view.findViewById(R.id.showAddressButton);
 
-        inputFragmentButton.setOnClickListener( v -> {
-            mainActivity.changeFragment(inputFragment);
-        });
-        showFragmentButton.setOnClickListener( v -> {
-            mainActivity.changeFragment(addListFrgment);
-        });
     }
 
     @Override
